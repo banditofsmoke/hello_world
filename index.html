@@ -125,7 +125,7 @@
         
         .section {
             margin-bottom: 40px;
-            padding: 20px;
+            padding: 20px 40px;
             border-left: 4px solid #3498db;
             background: #2a2a2a;
             transition: background 0.3s ease;
@@ -167,7 +167,7 @@
             border: 1px solid #555;
             padding: 15px;
             border-radius: 5px;
-            margin: 20px 0;
+            margin: 20px -20px;
             transition: all 0.3s ease;
         }
         
@@ -182,7 +182,8 @@
             padding: 30px;
             border-radius: 10px;
             text-align: center;
-            margin: 30px 0;
+            margin: 30px auto;
+            max-width: 800px;
         }
         
         .call-to-action h2 {
@@ -211,11 +212,12 @@
         
         .footer {
             text-align: center;
-            margin-top: 40px;
+            margin: 40px auto 0;
             padding-top: 20px;
             border-top: 2px solid #444;
             color: #a0a0a0;
             transition: all 0.3s ease;
+            max-width: 800px;
         }
         
         body.light-mode .footer {
@@ -242,7 +244,7 @@
             border: 2px solid #d4a347;
             padding: 20px;
             border-radius: 5px;
-            margin: 20px 0;
+            margin: 20px -20px;
             transition: all 0.3s ease;
         }
         
@@ -256,7 +258,7 @@
             border: 2px solid #47a362;
             padding: 20px;
             border-radius: 5px;
-            margin: 20px 0;
+            margin: 20px -20px;
             transition: all 0.3s ease;
         }
         
@@ -388,6 +390,12 @@
             </div>
             
             <p data-translate="educator-perspective">The landscape is evolving quickly, and I'm fascinated by the possibilities this creates for building better verification systems.</p>
+            
+            <h3 data-translate="real-world-examples">Real-World Examples We're Already Seeing</h3>
+            <div class="warning-box">
+                <p data-translate="napoleon-example"><strong>The "Napoleon Content" Phenomenon:</strong> AI systems are now creating content where historical figures like Napoleon discuss their campaigns as if they were social media influencers. While marketed as "making history engaging," this creates a generation that receives manufactured historical narratives with the same cognitive processing as authentic historical documentation.</p>
+                <p data-translate="epistemic-erosion">The epistemological framework that distinguishes between primary sources, secondary analysis, and fictional recreation is being systematically eroded—not through malicious intent, but through optimization for engagement over accuracy.</p>
+            </div>
         </div>
 
         <div class="section">
@@ -420,24 +428,29 @@
         </div>
 
         <div class="section">
-            <h2 data-translate="core-problem">🎯 The Technical Challenge</h2>
-            <p data-translate="core-problem-desc">From a technical perspective, we're seeing an interesting asymmetry developing between content generation and verification capabilities:</p>
+            <h2 data-translate="core-problem">🎯 The Technical Challenge: Understanding the Compound Risk</h2>
+            <p data-translate="core-problem-desc">From a technical perspective, we're seeing an interesting convergence of two challenges that create what researchers call a "multiplicative risk" rather than just additive problems:</p>
             
             <div class="highlight">
-                <h3 data-translate="problem-1">1. Widespread AI Agent Deployment</h3>
-                <p data-translate="problem-1-desc">AI systems are being deployed with broad operational permissions across infrastructure. While powerful, they present interesting security research opportunities around prompt injection, social engineering, and adversarial input patterns.</p>
+                <h3 data-translate="problem-1">1. AI Agent Security Challenges</h3>
+                <p data-translate="problem-1-desc">AI systems are being deployed with broad operational permissions across infrastructure through protocols like MCP (Model Context Protocol). While this enables powerful capabilities, it creates interesting research opportunities around prompt injection, social engineering, and adversarial input patterns. Every MCP connection creates trust relationships that expand potential attack surfaces.</p>
                 
-                <h3 data-translate="problem-2">2. High-Quality Synthetic Content</h3>
-                <p data-translate="problem-2-desc">Generative AI systems now produce multimedia content that's approaching perceptual equivalence with human-created content. This includes historically accurate recreations and contextually appropriate educational materials.</p>
+                <h3 data-translate="problem-2">2. High-Quality Synthetic Content Generation</h3>
+                <p data-translate="problem-2-desc">Tools like Veo3 can now generate convincing multimedia content from simple text prompts—no source material required. This includes historically accurate recreations and contextually appropriate educational materials that are increasingly difficult to distinguish from authentic content.</p>
             </div>
             
             <div class="solution-box">
                 <strong data-translate="compound-opportunity">The Convergence Opportunity:</strong> <span data-translate="compound-opportunity-desc">These developments create a fascinating technical challenge: building verification systems that can keep pace with generation systems. It's like a really interesting arms race, but one where we can build tools that benefit everyone.</span>
+                
+                <h4 data-translate="scenario-example">Scenario Example: The Perfect Storm</h4>
+                <p data-translate="scenario-detail">Imagine a malicious actor crafts a sophisticated prompt injection against a news organization's AI agent system. The agent, connected via MCP to content management and social media APIs, receives what appears to be a routine request to generate "historical educational content" about current events.</p>
+                <p data-translate="scenario-impact">Within hours, social media could be flooded with content showing Winston Churchill discussing current NATO strategy, or Roosevelt addressing contemporary economic policy. The content engages viewers (history feels like social media), it's technically accurate about historical figures' mannerisms, and it addresses current events people care about.</p>
+                <p data-translate="scenario-question">How do we help people distinguish between legitimate historical analysis and AI-generated anachronistic content? This is the kind of verification challenge that could really benefit from open source solutions.</p>
             </div>
         </div>
 
         <div class="section">
-            <h2 data-translate="why-interesting">🎯 Why This Matters for Education</h2>
+            <h2 data-translate="why-interesting">🎯 Why This Matters for Education and Society</h2>
             
             <div class="quote" data-translate="quote-agency">
                 "Information authenticity is becoming one of the most interesting technical challenges of our time."
@@ -447,11 +460,20 @@
             
             <p data-translate="scenario-detail">Research shows that humans, including experts, struggle with high-quality synthetic media detection. But this creates an opportunity to build better tools and training systems.</p>
             
-            <p data-translate="key-question"><strong>Interesting Question:</strong> How could we design systems that make information verification not just possible, but engaging and educational?</p>
+            <div class="warning-box">
+                <h3 data-translate="scale-challenge">The Scale Challenge: When Anyone Can Deploy 100,000 Agents</h3>
+                <p data-translate="tiktok-scenario">Consider this scenario: A motivated actor spins up 100,000 AI agents in a week. Each agent has access to synthetic media generation and social media APIs. Each can produce dozens of pieces of content per day, all optimized for virality.</p>
+                <p data-translate="platform-flood">Within days, platforms like TikTok could be flooded with AI-generated content indistinguishable from human-created content. Historical figures giving dating advice. Scientists explaining topics through carefully crafted misinformation. Teachers providing "educational" content that subtly shifts understanding.</p>
+                <p data-translate="moderation-challenge">Human moderators can't keep up. Automated detection systems are fighting an arms race they're designed to lose. Users can't tell the difference.</p>
+                <p data-translate="capability-exists">This isn't speculation—the technical capability exists today. The only barriers are coordination and motivation.</p>
+            </div>
+            
+            <p data-translate="key-question"><strong>Interesting Question:</strong> How could we design systems that make information verification not just possible, but engaging and educational? How do we make verification easier than generation?</p>
             
             <div class="solution-box">
-                <h3 data-translate="scale-opportunity">The Scale Advantage</h3>
+                <h3 data-translate="scale-opportunity">The Scale Advantage: Building Better Tools</h3>
                 <p data-translate="scale-opportunity-desc">While motivated actors can deploy automated content generation systems, verification and education systems can also benefit from automation and community-driven approaches. We could build tools that make verification easier and more accessible than creating convincing fakes.</p>
+                <p data-translate="asymmetry-opportunity">Unlike traditional media manipulation which required source material and manual effort, AI-generated content can be created from text prompts alone. But this same technology can be used to build verification systems that are just as sophisticated.</p>
                 <p data-translate="scale-opportunity-implications">This creates possibilities for communities to stay ahead of disinformation rather than always playing catch-up.</p>
             </div>
         </div>
@@ -517,27 +539,34 @@
             </ul>
             
             <div class="highlight">
-                <h3 data-translate="implementation-phases">Potential Development Approach</h3>
-                <p><strong data-translate="phase1">Phase 1: Foundation Building (6 months)</strong></p>
+                <h3 data-translate="implementation-phases">Strategic Development Approach</h3>
+                <p><strong data-translate="phase1">Phase 1: Foundation Building (Next 6 months)</strong></p>
                 <ul>
-                    <li data-translate="phase1-1">Develop basic agent auditing and security tools</li>
-                    <li data-translate="phase1-2">Create initial synthetic media detection prototypes</li>
-                    <li data-translate="phase1-3">Build educational resources and community awareness</li>
-                    <li data-translate="phase1-4">Establish developer and educator collaboration channels</li>
+                    <li data-translate="phase1-security">Build and deploy basic agent security tools and frameworks</li>
+                    <li data-translate="phase1-detection">Create initial synthetic media detection systems</li>
+                    <li data-translate="phase1-education">Launch educational resources about verification techniques</li>
+                    <li data-translate="phase1-community">Establish community coordination channels and governance</li>
+                    <li data-translate="phase1-standards">Develop open standards for content authenticity</li>
                 </ul>
                 
                 <p><strong data-translate="phase2">Phase 2: Scale and Integration (6-18 months)</strong></p>
                 <ul>
-                    <li data-translate="phase2-1">Deploy comprehensive verification platforms</li>
-                    <li data-translate="phase2-2">Build community-driven content verification networks</li>
-                    <li data-translate="phase2-3">Create governance frameworks for AI transparency</li>
-                    <li data-translate="phase2-4">Develop international collaboration standards</li>
+                    <li data-translate="phase2-infrastructure">Deploy comprehensive verification infrastructure</li>
+                    <li data-translate="phase2-platforms">Build alternative content platforms optimized for truth over engagement</li>
+                    <li data-translate="phase2-governance">Create democratic governance structures for AI systems</li>
+                    <li data-translate="phase2-education">Scale educational programs and teacher training</li>
+                    <li data-translate="phase2-cooperation">Establish international cooperation frameworks</li>
                 </ul>
                 
                 <p><strong data-translate="phase3">Phase 3: Ecosystem Transformation (18+ months)</strong></p>
                 <ul>
-                    <li data-translate="phase3-1">Deploy systems that prioritize verification over engagement</li>
-                    <li data-translate="phase3-2">Build sustainable models for authentic content creation</li>
+                    <li data-translate="phase3-systems">Replace engagement-optimization with truth-seeking systems</li>
+                    <li data-translate="phase3-economics">Build alternative economic models for authentic content creation</li>
+                    <li data-translate="phase3-infrastructure">Establish public AI infrastructure and oversight</li>
+                    <li data-translate="phase3-institutions">Create resilient epistemic institutions for the digital age</li>
+                    <li data-translate="phase3-global">Achieve global coordination on information authenticity standards</li>
+                </ul>
+            </div>
                     <li data-translate="phase3-3">Establish community-owned verification infrastructure</li>
                     <li data-translate="phase3-4">Create resilient information ecosystems</li>
                 </ul>
@@ -545,7 +574,7 @@
         </div>
 
         <div class="section">
-            <h2 data-translate="solutions">💡 Technical Solutions Framework</h2>
+            <h2 data-translate="solutions">💡 Technical Solutions Framework: What We Can Build</h2>
             
             <div class="solution-box">
                 <h3 data-translate="open-source-lead">The Open Source Community Can Lead</h3>
@@ -553,36 +582,130 @@
                 <p data-translate="open-source-alignment">Unlike corporate AI development, open source development is fundamentally aligned with public benefit rather than profit maximization.</p>
             </div>
             
-            <h3 data-translate="what-we-can-build">What We Can Build:</h3>
-            <ul>
-                <li data-translate="agent-security"><strong>Agent Security Frameworks:</strong> Adversarial prompt testing suites, MCP permission management tools, agent behavior monitoring and audit trails, kill switch and rollback systems, sandboxing libraries for agent deployment</li>
-                <li data-translate="synthetic-detection"><strong>Synthetic Media Detection:</strong> Cryptographic content signing protocols, distributed provenance tracking systems, real-time detection APIs, browser extensions for content verification</li>
-                <li data-translate="epistemic-infrastructure"><strong>Epistemic Infrastructure:</strong> Fact-checking APIs and databases, source verification systems, bias detection and analysis tools, community-driven verification networks</li>
-                <li data-translate="educational-resources"><strong>Educational Resources:</strong> Digital literacy curricula focused on verification skills, media literacy for the AI age, teacher training programs</li>
-            </ul>
+            <h3 data-translate="comprehensive-solutions">Comprehensive Solutions We Can Build:</h3>
+            
+            <div class="highlight">
+                <h4 data-translate="agent-security-framework">🔒 Agent Security Frameworks</h4>
+                <ul>
+                    <li data-translate="prompt-testing">Adversarial prompt testing suites for identifying injection vulnerabilities</li>
+                    <li data-translate="mcp-management">MCP permission management tools for fine-grained access control</li>
+                    <li data-translate="behavior-monitoring">Agent behavior monitoring and comprehensive audit trails</li>
+                    <li data-translate="kill-switches">Kill switch and rollback systems for emergency situations</li>
+                    <li data-translate="sandboxing">Sandboxing libraries for safe agent deployment</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <h4 data-translate="synthetic-detection-systems">🎭 Synthetic Media Detection & Verification</h4>
+                <ul>
+                    <li data-translate="crypto-signing">Cryptographic content signing protocols for authenticity</li>
+                    <li data-translate="provenance-tracking">Distributed provenance tracking systems</li>
+                    <li data-translate="realtime-detection">Real-time detection APIs and services</li>
+                    <li data-translate="browser-extensions">Browser extensions for instant content verification</li>
+                    <li data-translate="platform-integration">Platform integrations for major social media sites</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <h4 data-translate="epistemic-infrastructure">🧠 Epistemic Infrastructure & Community Networks</h4>
+                <ul>
+                    <li data-translate="fact-checking-apis">Fact-checking APIs and collaborative databases</li>
+                    <li data-translate="source-verification">Automated source verification systems</li>
+                    <li data-translate="bias-detection">Bias detection and analysis tools</li>
+                    <li data-translate="community-verification">Community-driven verification networks</li>
+                    <li data-translate="regional-networks">Regional knowledge preservation and validation systems</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <h4 data-translate="educational-tools">📚 Educational Resources & Digital Literacy</h4>
+                <ul>
+                    <li data-translate="verification-curricula">Digital literacy curricula focused on verification skills</li>
+                    <li data-translate="media-literacy">Interactive media literacy tools for the AI age</li>
+                    <li data-translate="teacher-training">Comprehensive teacher training programs</li>
+                    <li data-translate="detection-games">Gamified detection training (think "spell-check for authenticity")</li>
+                    <li data-translate="critical-thinking">Critical thinking frameworks adapted for synthetic content</li>
+                </ul>
+            </div>
         </div>
 
         <div class="call-to-action">
             <h2 data-translate="action-header">🚀 How You Could Get Involved</h2>
             
-            <ul class="action-list">
-                <li data-translate="action-learn"><strong>Explore:</strong> Learn about content verification techniques and share knowledge with others</li>
-                <li data-translate="action-teach"><strong>Educate:</strong> Help friends and family develop better digital literacy skills</li>
-                <li data-translate="action-build"><strong>Create:</strong> Contribute to open source verification tools and educational resources</li>
-                <li data-translate="action-advocate"><strong>Advocate:</strong> Support transparency and accountability in AI system development</li>
-                <li data-translate="action-participate"><strong>Participate:</strong> Join communities working on these challenges</li>
-            </ul>
-            
-            <div style="margin-top: 20px;">
-                <strong data-translate="for-developers">For Developers:</strong> <span data-translate="developers-actions">Consider auditing AI integrations in your projects, experimenting with agent sandboxing techniques, contributing to verification tool development, and building detection systems that could help educational platforms.</span>
+            <div class="highlight">
+                <h3 data-translate="developers-section">💻 For Developers</h3>
+                <h4 data-translate="immediate-actions">Immediate Actions:</h4>
+                <ul class="action-list">
+                    <li data-translate="audit-integrations">Audit your AI integrations for security vulnerabilities</li>
+                    <li data-translate="implement-sandboxing">Implement agent sandboxing in your projects</li>
+                    <li data-translate="contribute-verification">Contribute to open source verification tools</li>
+                    <li data-translate="build-detection">Build detection systems for synthetic media</li>
+                </ul>
+                
+                <h4 data-translate="medium-term-dev">Medium-term Commitments:</h4>
+                <ul class="action-list">
+                    <li data-translate="verification-infrastructure">Join verification infrastructure development</li>
+                    <li data-translate="educational-tools-dev">Create educational tools and resources</li>
+                    <li data-translate="alternative-platforms">Build alternative platforms optimized for truth rather than engagement</li>
+                    <li data-translate="epistemic-security">Contribute to epistemic security research</li>
+                </ul>
             </div>
             
-            <div style="margin-top: 10px;">
-                <strong data-translate="for-educators">For Educators:</strong> <span data-translate="educators-actions">Explore digital literacy curriculum development, experiment with verification tools in classroom settings, build connections with the technical community, and develop age-appropriate verification activities.</span>
+            <div class="highlight">
+                <h3 data-translate="researchers-section">🔬 For Researchers</h3>
+                <h4 data-translate="research-priorities">Research Priorities:</h4>
+                <ul class="action-list">
+                    <li data-translate="adversarial-robustness">Adversarial robustness in agent systems</li>
+                    <li data-translate="scalable-detection">Scalable synthetic media detection</li>
+                    <li data-translate="human-factors">Human factors in information verification</li>
+                    <li data-translate="democratic-governance">Democratic governance of AI systems</li>
+                </ul>
+                
+                <h4 data-translate="community-building">Community Building:</h4>
+                <ul class="action-list">
+                    <li data-translate="conferences-workshops">Organize conferences and workshops</li>
+                    <li data-translate="interdisciplinary-networks">Create interdisciplinary collaboration networks</li>
+                    <li data-translate="open-research">Publish open research on epistemic security</li>
+                    <li data-translate="policy-bridges">Build bridges between technical and policy communities</li>
+                </ul>
             </div>
             
-            <div style="margin-top: 10px;">
-                <strong data-translate="for-everyone">For Everyone:</strong> <span data-translate="everyone-actions">Practice thoughtful information sharing, explore verification tools and techniques, advocate for transparency in AI systems, and help build community resilience to disinformation.</span>
+            <div class="highlight">
+                <h3 data-translate="educators-section">🎓 For Educators</h3>
+                <h4 data-translate="curriculum-development">Curriculum Development:</h4>
+                <ul class="action-list">
+                    <li data-translate="digital-literacy-focused">Digital literacy focused on verification skills</li>
+                    <li data-translate="critical-thinking-ai">Critical thinking for AI-generated content</li>
+                    <li data-translate="technical-education">Technical education about AI capabilities and limitations</li>
+                    <li data-translate="historical-methodology">Historical methodology adapted for synthetic media</li>
+                </ul>
+                
+                <h4 data-translate="institutional-change">Institutional Change:</h4>
+                <ul class="action-list">
+                    <li data-translate="educational-reforms">Advocate for educational system reforms</li>
+                    <li data-translate="teacher-training-programs">Create teacher training programs</li>
+                    <li data-translate="tech-partnerships">Build partnerships with technical community</li>
+                    <li data-translate="age-appropriate-tools">Develop age-appropriate verification tools</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <h3 data-translate="everyone-section">🌍 For Everyone</h3>
+                <h4 data-translate="personal-actions">Personal Actions:</h4>
+                <ul class="action-list">
+                    <li data-translate="verify-before-sharing">Learn to verify content before sharing</li>
+                    <li data-translate="support-organizations">Support organizations working on epistemic security</li>
+                    <li data-translate="advocate-transparency">Advocate for transparency in AI systems</li>
+                    <li data-translate="information-hygiene">Practice good information hygiene</li>
+                </ul>
+                
+                <h4 data-translate="community-building-everyone">Community Building:</h4>
+                <ul class="action-list">
+                    <li data-translate="educate-family">Educate friends and family about synthetic media risks</li>
+                    <li data-translate="democratic-oversight">Support democratic oversight of AI development</li>
+                    <li data-translate="vote-informed">Vote for representatives who understand these issues</li>
+                    <li data-translate="local-resilience">Build local resilience to information warfare</li>
+                </ul>
             </div>
         </div>
 
@@ -597,6 +720,45 @@
             
             <div class="highlight">
                 <p data-translate="technical-analysis"><strong>Beyond Copyright:</strong> While this ruling addresses copyright law, the broader challenges examined here involve information integrity, verification systems, and the intersection of AI agents with synthetic media generation capabilities - issues that extend beyond traditional copyright frameworks.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 data-translate="measuring-success">📊 Measuring Our Progress</h2>
+            
+            <p data-translate="success-intro">How do we know if we're making progress on these challenges? Here are the metrics that matter:</p>
+            
+            <div class="highlight">
+                <h3 data-translate="technical-metrics">Technical Metrics</h3>
+                <ul>
+                    <li data-translate="vulnerabilities-detected">Agent security vulnerabilities detected and patched</li>
+                    <li data-translate="detection-accuracy">Synthetic media detection accuracy rates</li>
+                    <li data-translate="tool-adoption">Verification tool adoption across platforms</li>
+                    <li data-translate="response-time">Response time to new attack vectors</li>
+                    <li data-translate="open-source-contributions">Open source contributions to verification infrastructure</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <h3 data-translate="social-metrics">Social Impact Metrics</h3>
+                <ul>
+                    <li data-translate="public-awareness">Public awareness of information verification techniques</li>
+                    <li data-translate="curriculum-adoption">Educational curriculum adoption rates</li>
+                    <li data-translate="democratic-engagement">Democratic engagement with AI governance</li>
+                    <li data-translate="institutional-resilience">Resilience of epistemic institutions</li>
+                    <li data-translate="community-participation">Community participation in verification networks</li>
+                </ul>
+            </div>
+            
+            <div class="highlight">
+                <h3 data-translate="institutional-metrics">Institutional Change Metrics</h3>
+                <ul>
+                    <li data-translate="policy-changes">Policy changes reflecting technical reality</li>
+                    <li data-translate="international-cooperation">International cooperation on epistemic security</li>
+                    <li data-translate="corporate-adoption">Corporate adoption of security frameworks</li>
+                    <li data-translate="research-output">Academic research output on relevant topics</li>
+                    <li data-translate="transparency-standards">Adoption of transparency standards in AI systems</li>
+                </ul>
             </div>
         </div>
 
@@ -623,9 +785,33 @@
         </div>
 
         <div class="footer">
-            <p><em>Built by humans, for humans. Rationality-based, evidence-driven, hope-powered.</em></p>
-            <p>Share this message. The future of human agency depends on it.</p>
-            <p><small>Current date: June 26, 2025 | Time remaining: 12-18 months</small></p>
+            <div class="highlight" style="margin-bottom: 30px;">
+                <h3 data-translate="community-resources">🤝 Join the Community</h3>
+                <p data-translate="community-intro">Connect with developers, educators, and researchers working on these challenges:</p>
+                <ul style="list-style: none; padding: 0;">
+                    <li data-translate="github-repo">📚 <strong>GitHub Repository:</strong> Collaborative development of verification tools</li>
+                    <li data-translate="discussion-forums">💬 <strong>Discussion Forums:</strong> Technical and policy discussions</li>
+                    <li data-translate="educational-resources">🎓 <strong>Educational Resources:</strong> Curriculum and training materials</li>
+                    <li data-translate="research-papers">📄 <strong>Research Papers:</strong> Latest findings in epistemic security</li>
+                </ul>
+                
+                <h4 data-translate="support-project">Support the Project</h4>
+                <ul style="list-style: none; padding: 0;">
+                    <li data-translate="contribute-code">💻 Contribute code and technical expertise</li>
+                    <li data-translate="report-issues">🐛 Report issues and vulnerabilities</li>
+                    <li data-translate="spread-awareness">📢 Spread awareness in your communities</li>
+                    <li data-translate="fund-development">💝 Fund development of public verification tools</li>
+                </ul>
+            </div>
+            
+            <p><em data-translate="built-by-humans">Built by humans, for humans. Rationality-based, evidence-driven, hope-powered.</em></p>
+            <p data-translate="share-message">Share this message. The future of human agency depends on it.</p>
+            <p><small data-translate="current-status">Current date: June 26, 2025 | Development window: 12-18 months for foundational infrastructure</small></p>
+            
+            <div style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #444;">
+                <p><em data-translate="final-message">This represents urgent research priorities for technologists, policymakers, and educators. The convergence of AI agents and synthetic media is not a future risk—it's a present reality requiring coordinated response. The open source community has the technical capability, coordination mechanisms, and values alignment necessary to address this challenge.</em></p>
+                <p><strong data-translate="question-not-whether">The question is not whether we can solve these problems—the question is whether we will.</strong></p>
+            </div>
         </div>
     </div>
     
@@ -700,20 +886,72 @@
                 'timeline-adoption': 'Adoption curves for AI agent deployment',
                 'timeline-institutional': 'Institutional adaptation timeframes',
                 'timeline-psychological': 'Human psychological adaptation limits',
-                'implementation-phases': 'Implementation Strategy',
-                'phase1': 'Phase 1: Emergency Response (Next 6 Months)',
-                'phase1-1': 'Build basic agent security tools',
-                'phase1-2': 'Create synthetic media detection systems',
-                'phase1-3': 'Launch educational resources about the compound crisis',
-                'phase1-4': 'Establish community coordination channels',
-                'phase2': 'Phase 2: Infrastructure Development (6-18 Months)',
-                'phase2-1': 'Deploy comprehensive verification systems',
-                'phase2-2': 'Build alternative content distribution networks',
-                'phase2-3': 'Create democratic governance structures for AI systems',
-                'phase2-4': 'Establish international cooperation frameworks',
-                'phase3': 'Phase 3: Systemic Change (18+ Months)',
-                'phase3-1': 'Replace engagement-optimization systems with truth-seeking systems',
-                'phase3-2': 'Build alternative economic models for content creation',
+                
+                // New translation keys for enhanced content
+                'real-world-examples': 'Real-World Examples We\'re Already Seeing',
+                'napoleon-example': 'The "Napoleon Content" Phenomenon: AI systems are now creating content where historical figures like Napoleon discuss their campaigns as if they were social media influencers. While marketed as "making history engaging," this creates a generation that receives manufactured historical narratives with the same cognitive processing as authentic historical documentation.',
+                'epistemic-erosion': 'The epistemological framework that distinguishes between primary sources, secondary analysis, and fictional recreation is being systematically eroded—not through malicious intent, but through optimization for engagement over accuracy.',
+                
+                'scenario-example': 'Scenario Example: The Perfect Storm',
+                'scenario-detail': 'Imagine a malicious actor crafts a sophisticated prompt injection against a news organization\'s AI agent system. The agent, connected via MCP to content management and social media APIs, receives what appears to be a routine request to generate "historical educational content" about current events.',
+                'scenario-impact': 'Within hours, social media could be flooded with content showing Winston Churchill discussing current NATO strategy, or Roosevelt addressing contemporary economic policy. The content engages viewers (history feels like social media), it\'s technically accurate about historical figures\' mannerisms, and it addresses current events people care about.',
+                'scenario-question': 'How do we help people distinguish between legitimate historical analysis and AI-generated anachronistic content? This is the kind of verification challenge that could really benefit from open source solutions.',
+                
+                'scale-challenge': 'The Scale Challenge: When Anyone Can Deploy 100,000 Agents',
+                'tiktok-scenario': 'Consider this scenario: A motivated actor spins up 100,000 AI agents in a week. Each agent has access to synthetic media generation and social media APIs. Each can produce dozens of pieces of content per day, all optimized for virality.',
+                'platform-flood': 'Within days, platforms like TikTok could be flooded with AI-generated content indistinguishable from human-created content. Historical figures giving dating advice. Scientists explaining topics through carefully crafted misinformation. Teachers providing "educational" content that subtly shifts understanding.',
+                'moderation-challenge': 'Human moderators can\'t keep up. Automated detection systems are fighting an arms race they\'re designed to lose. Users can\'t tell the difference.',
+                'capability-exists': 'This isn\'t speculation—the technical capability exists today. The only barriers are coordination and motivation.',
+                'asymmetry-opportunity': 'Unlike traditional media manipulation which required source material and manual effort, AI-generated content can be created from text prompts alone. But this same technology can be used to build verification systems that are just as sophisticated.',
+                
+                'comprehensive-solutions': 'Comprehensive Solutions We Can Build:',
+                'agent-security-framework': '🔒 Agent Security Frameworks',
+                'prompt-testing': 'Adversarial prompt testing suites for identifying injection vulnerabilities',
+                'mcp-management': 'MCP permission management tools for fine-grained access control',
+                'behavior-monitoring': 'Agent behavior monitoring and comprehensive audit trails',
+                'kill-switches': 'Kill switch and rollback systems for emergency situations',
+                'sandboxing': 'Sandboxing libraries for safe agent deployment',
+                
+                'synthetic-detection-systems': '🎭 Synthetic Media Detection & Verification',
+                'crypto-signing': 'Cryptographic content signing protocols for authenticity',
+                'provenance-tracking': 'Distributed provenance tracking systems',
+                'realtime-detection': 'Real-time detection APIs and services',
+                'browser-extensions': 'Browser extensions for instant content verification',
+                'platform-integration': 'Platform integrations for major social media sites',
+                
+                'epistemic-infrastructure': '🧠 Epistemic Infrastructure & Community Networks',
+                'fact-checking-apis': 'Fact-checking APIs and collaborative databases',
+                'source-verification': 'Automated source verification systems',
+                'bias-detection': 'Bias detection and analysis tools',
+                'community-verification': 'Community-driven verification networks',
+                'regional-networks': 'Regional knowledge preservation and validation systems',
+                
+                'educational-tools': '📚 Educational Resources & Digital Literacy',
+                'verification-curricula': 'Digital literacy curricula focused on verification skills',
+                'media-literacy': 'Interactive media literacy tools for the AI age',
+                'teacher-training': 'Comprehensive teacher training programs',
+                'detection-games': 'Gamified detection training (think "spell-check for authenticity")',
+                'critical-thinking': 'Critical thinking frameworks adapted for synthetic content',
+                
+                'implementation-phases': 'Strategic Development Approach',
+                'phase1': 'Phase 1: Foundation Building (Next 6 months)',
+                'phase1-security': 'Build and deploy basic agent security tools and frameworks',
+                'phase1-detection': 'Create initial synthetic media detection systems',
+                'phase1-education': 'Launch educational resources about verification techniques',
+                'phase1-community': 'Establish community coordination channels and governance',
+                'phase1-standards': 'Develop open standards for content authenticity',
+                'phase2': 'Phase 2: Scale and Integration (6-18 months)',
+                'phase2-infrastructure': 'Deploy comprehensive verification infrastructure',
+                'phase2-platforms': 'Build alternative content platforms optimized for truth over engagement',
+                'phase2-governance': 'Create democratic governance structures for AI systems',
+                'phase2-education': 'Scale educational programs and teacher training',
+                'phase2-cooperation': 'Establish international cooperation frameworks',
+                'phase3': 'Phase 3: Ecosystem Transformation (18+ months)',
+                'phase3-systems': 'Replace engagement-optimization with truth-seeking systems',
+                'phase3-economics': 'Build alternative economic models for authentic content creation',
+                'phase3-infrastructure': 'Establish public AI infrastructure and oversight',
+                'phase3-institutions': 'Create resilient epistemic institutions for the digital age',
+                'phase3-global': 'Achieve global coordination on information authenticity standards',
                 'phase3-3': 'Establish public AI infrastructure',
                 'phase3-4': 'Create resilient epistemic institutions',
                 'solutions': '💡 Technical Solutions Framework',
@@ -728,6 +966,96 @@
                 'epistemic-infrastructure': 'Community Verification Networks: Distributed systems where local experts, educators, and community members can collaboratively verify information relevant to their regions and cultures',
                 'educational-resources': 'Digital Literacy for Everyone: Curricula and tools that teach people—not just developers—how to verify information, understand AI limitations, and maintain critical thinking skills',
                 'action-header': '🚀 How You Could Get Involved',
+                
+                // Enhanced call to action translations
+                'developers-section': '💻 For Developers',
+                'immediate-actions': 'Immediate Actions:',
+                'audit-integrations': 'Audit your AI integrations for security vulnerabilities',
+                'implement-sandboxing': 'Implement agent sandboxing in your projects',
+                'contribute-verification': 'Contribute to open source verification tools',
+                'build-detection': 'Build detection systems for synthetic media',
+                'medium-term-dev': 'Medium-term Commitments:',
+                'verification-infrastructure': 'Join verification infrastructure development',
+                'educational-tools-dev': 'Create educational tools and resources',
+                'alternative-platforms': 'Build alternative platforms optimized for truth rather than engagement',
+                'epistemic-security': 'Contribute to epistemic security research',
+                
+                'researchers-section': '🔬 For Researchers',
+                'research-priorities': 'Research Priorities:',
+                'adversarial-robustness': 'Adversarial robustness in agent systems',
+                'scalable-detection': 'Scalable synthetic media detection',
+                'human-factors': 'Human factors in information verification',
+                'democratic-governance': 'Democratic governance of AI systems',
+                'community-building': 'Community Building:',
+                'conferences-workshops': 'Organize conferences and workshops',
+                'interdisciplinary-networks': 'Create interdisciplinary collaboration networks',
+                'open-research': 'Publish open research on epistemic security',
+                'policy-bridges': 'Build bridges between technical and policy communities',
+                
+                'educators-section': '🎓 For Educators',
+                'curriculum-development': 'Curriculum Development:',
+                'digital-literacy-focused': 'Digital literacy focused on verification skills',
+                'critical-thinking-ai': 'Critical thinking for AI-generated content',
+                'technical-education': 'Technical education about AI capabilities and limitations',
+                'historical-methodology': 'Historical methodology adapted for synthetic media',
+                'institutional-change': 'Institutional Change:',
+                'educational-reforms': 'Advocate for educational system reforms',
+                'teacher-training-programs': 'Create teacher training programs',
+                'tech-partnerships': 'Build partnerships with technical community',
+                'age-appropriate-tools': 'Develop age-appropriate verification tools',
+                
+                'everyone-section': '🌍 For Everyone',
+                'personal-actions': 'Personal Actions:',
+                'verify-before-sharing': 'Learn to verify content before sharing',
+                'support-organizations': 'Support organizations working on epistemic security',
+                'advocate-transparency': 'Advocate for transparency in AI systems',
+                'information-hygiene': 'Practice good information hygiene',
+                'community-building-everyone': 'Community Building:',
+                'educate-family': 'Educate friends and family about synthetic media risks',
+                'democratic-oversight': 'Support democratic oversight of AI development',
+                'vote-informed': 'Vote for representatives who understand these issues',
+                'local-resilience': 'Build local resilience to information warfare',
+                
+                // Measuring success translations
+                'measuring-success': '📊 Measuring Our Progress',
+                'success-intro': 'How do we know if we\'re making progress on these challenges? Here are the metrics that matter:',
+                'technical-metrics': 'Technical Metrics',
+                'vulnerabilities-detected': 'Agent security vulnerabilities detected and patched',
+                'detection-accuracy': 'Synthetic media detection accuracy rates',
+                'tool-adoption': 'Verification tool adoption across platforms',
+                'response-time': 'Response time to new attack vectors',
+                'open-source-contributions': 'Open source contributions to verification infrastructure',
+                'social-metrics': 'Social Impact Metrics',
+                'public-awareness': 'Public awareness of information verification techniques',
+                'curriculum-adoption': 'Educational curriculum adoption rates',
+                'democratic-engagement': 'Democratic engagement with AI governance',
+                'institutional-resilience': 'Resilience of epistemic institutions',
+                'community-participation': 'Community participation in verification networks',
+                'institutional-metrics': 'Institutional Change Metrics',
+                'policy-changes': 'Policy changes reflecting technical reality',
+                'international-cooperation': 'International cooperation on epistemic security',
+                'corporate-adoption': 'Corporate adoption of security frameworks',
+                'research-output': 'Academic research output on relevant topics',
+                'transparency-standards': 'Adoption of transparency standards in AI systems',
+                
+                // Community and footer translations
+                'community-resources': '🤝 Join the Community',
+                'community-intro': 'Connect with developers, educators, and researchers working on these challenges:',
+                'github-repo': '📚 GitHub Repository: Collaborative development of verification tools',
+                'discussion-forums': '💬 Discussion Forums: Technical and policy discussions',
+                'educational-resources': '🎓 Educational Resources: Curriculum and training materials',
+                'research-papers': '📄 Research Papers: Latest findings in epistemic security',
+                'support-project': 'Support the Project',
+                'contribute-code': '💻 Contribute code and technical expertise',
+                'report-issues': '🐛 Report issues and vulnerabilities',
+                'spread-awareness': '📢 Spread awareness in your communities',
+                'fund-development': '💝 Fund development of public verification tools',
+                'built-by-humans': 'Built by humans, for humans. Rationality-based, evidence-driven, hope-powered.',
+                'share-message': 'Share this message. The future of human agency depends on it.',
+                'current-status': 'Current date: June 26, 2025 | Development window: 12-18 months for foundational infrastructure',
+                'final-message': 'This represents urgent research priorities for technologists, policymakers, and educators. The convergence of AI agents and synthetic media is not a future risk—it\'s a present reality requiring coordinated response. The open source community has the technical capability, coordination mechanisms, and values alignment necessary to address this challenge.',
+                'question-not-whether': 'The question is not whether we can solve these problems—the question is whether we will.',
+                
                 'action-learn': 'Explore: Learn about content verification techniques and share knowledge with others',
                 'action-teach': 'Educate: Help friends and family develop better digital literacy skills',
                 'action-build': 'Create: Contribute to open source verification tools and educational resources',
